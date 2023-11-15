@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 2</title>
+    <!-- Create an image gallery with three images in a row. Use media queries to adjust the layout to two images in a row for screens smaller than 800px and one image in a row for screens smaller than 500px. -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container img {
+            width: 30%;
+            margin: 10px;
+        }
+
+        @media screen and (max-width:800px) {
+            .container img {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://fastly.picsum.photos/id/187/200/300.jpg?hmac=RGKQU40hHnXm-pBoMbUE5TDcy26DLc6CdcqednFcmB0"
+            alt="">
+        <img src="https://fastly.picsum.photos/id/187/200/300.jpg?hmac=RGKQU40hHnXm-pBoMbUE5TDcy26DLc6CdcqednFcmB0"
+            alt="">
+        <img src="https://fastly.picsum.photos/id/187/200/300.jpg?hmac=RGKQU40hHnXm-pBoMbUE5TDcy26DLc6CdcqednFcmB0"
+            alt="">
+    </div>
+</body>
+
+</html>

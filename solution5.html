@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 5</title>
+    <!-- Create the below given layout using the flexbox in css, which should adapt itself on mobile screen as per given below output. -->
+    <style>
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            text-align: center;
+            color: white;
+        }
+
+        .header,
+        .footer {
+            background-color: gray;
+            padding: 30px;
+        }
+
+        .content-1 {
+            background-color: #66cc99;
+            padding: 30px;
+            flex: 1;
+        }
+
+        .content-2 {
+            background-color: #ff9933;
+            padding: 30px;
+            flex: 1;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        @media screen and (max-width:800px) {
+            .container {
+                flex-direction: column;
+            }
+            .content-1, .content-2{
+                flex: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Box 1</div>
+        <div class="main">
+            <div class="content-1">Box 2</div>
+            <div class="content-2">Box 3</div>
+        </div>
+        <div class="footer">Box 4</div>
+    </div>
+</body>
+
+</html>
